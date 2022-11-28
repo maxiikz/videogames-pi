@@ -9,8 +9,8 @@ function App() {
   return (
   <Routes>
       <Route exact path="/" element ={<Landing/>}></Route>
-      <Route exact path="/home" element ={<Home/>}></Route>
-      <Route exact path="/videogame/:id" element ={<Details/>}></Route>
+      <Route exact path="/videogames" element ={<Home/>}></Route>
+      <Route exact path="/videogames/:id" element ={<Details/>}></Route>
       <Route exact path="/new" element ={<CreateGame/>}></Route>
   </Routes>
   );
