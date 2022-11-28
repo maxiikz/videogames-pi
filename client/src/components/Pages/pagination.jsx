@@ -10,4 +10,29 @@ export default function pagination({cardHome, allCards, pages, currentP}){
         numberPages.push(index);
         
     }
+    return(
+        <div className="pagNumb">
+            <ul>
+                {numberPages.length > 1 && numberPages.map((p,q)=>
+                p ===currentP ?(
+                    <li key={q}>
+                        <button className="buttonNumb" onClick={()=>pages(p)}>
+                            {p}
+                        </button>
+
+                    </li>
+                ):(
+                    <li key={q}>
+                         <button className="buttonNumb" onClick={()=>pages(p)}>
+                            {p}
+                        </button>
+
+                    </li>
+                )
+                
+                )}
+            </ul>
+
+        </div>
+    );
 }
